@@ -1,0 +1,10 @@
+<svg viewBox="0 0 188 108" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="84.5,108 94,89 103.5,108" fill="#ddd" />
+  <polygon points="94,102 50.5,14.5 54,7 94,89 134,7 137.5,14.5" fill="#999" />
+  <polyline points="2,110 54,4 106,110" fill="none" stroke="#272890" stroke-width="3" />
+  <polyline points="4,108 54,6 104,108" fill="#000" opacity=".07" />
+  <polyline points="49,14 94,104 139,14" fill="none" stroke="#272890" stroke-width="3" />
+  <polyline points="82,110 134,4 186,110" fill="none" stroke="#272890" stroke-width="3" />
+  <polyline points="84,108 134,4 184,108" fill="#000" opacity=".07" />
+  <polygon points="94,101 91,95 94,89 97,95" fill="#ffa500" />
+</svg>

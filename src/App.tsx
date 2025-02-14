@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import malinaLogo from './assets/malina-malina-logo.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <>
+            <header>
+                <h1>Malina Randrianavony</h1>
+                <h2>
+                    <span className="nowrap"> Engineer by trade | </span>
+                    <span className="nowrap"> Designer at &#9829; | </span>
+                    <span className="nowrap"> Artist on occasions</span>
+                </h2>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            </header>
+
+            <img className="center logo-m opacity-01" src={malinaLogo} alt="malina malina logo"/>
+
+            <main id="content">
+                <p>
+                    Malina believes <span className="color-bold-trans">magic </span> happens at the
+                    <span className="color-bold-trans"> intersection </span> of
+                    <span className="color-bold-trans"> functionality </span>,
+                    <span className="color-bold-trans"> beauty </span> and <span className="color-bold-trans"> meaning</span>.
+                </p>
+
+                <p>
+                    To practice her creative and technical skills, she has lately been building <a href="https://processes.vercel.app/">
+                    processes </a> and <a href="https://habits-today-nine.vercel.app/"> habits </a> tools.
+                </p>
+                <p>
+                     She also enjoys collaborating, sharing ideas and learning new things and can be accessible through
+                    <a href="https://www.linkedin.com/in/malinar"> LinkedIn </a> and <a href="mailto:malina.randrianavony@gmail.com"> email </a>.
+                </p>
+            </main>
+
+            <footer>
+                <section className="right">Designed & Coded by <img src={malinaLogo} className="logo-s" alt="malina malina logo"/><span className="display-hidden">M</span>alina Randrianavony.
+                </section>
+            </footer>
+        </>
+    )
 }
 
 export default App
