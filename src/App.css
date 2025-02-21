@@ -1,78 +1,165 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  --text-color: #272890;
-  --contrast-color: #ffa500;
-  --light-color: #aaa;
-
-  --font-sans-serif: 'Montserrat', sans-serif;
-  --font-serif: 'Suez One', serif;
-}
-
-body {
-  color: var(--text-color);
-  font-family: var(--font-sans-serif);
-}
-
-a {
-  border-bottom: 2px solid var(--contrast-color);
-  text-decoration: none;
-  position: relative;
-
-  &:link, &:visited { color: var(--text-color); }
-  &:hover { color: var(--contrast-color); }
-  &:active {
-    display: inline-block;
-    transform: translateY(0.2rem);
-  }
-}
-
-footer {
-  color: var(--light-color);
-  font-size: .7em;
-  margin-top: 7em;
-  padding: 2em 0;
-}
-
-h1 {
-  font-family: var(--font-serif);
-  font-size: 1.2em;
-  margin-top: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-family: var(--font-serif);
-  font-size: 1.1em;
-  text-align: center;
-}
-
-h1, h2 {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-p {
-  font-size: 1em;
-  line-height: 1.4em;
-}
-
 #content {
   margin-left: auto;
   margin-right: auto;
 }
 
-.center { display: block; margin: 0 auto; text-align: center; }
-.color-bold-trans { color: var(--contrast-color); }
+.center { display: block; margin: 0 auto; text-align: center }
 .display-hidden { display: none; }
-.logo-m { width: 8em; }
+.logo-animation { margin: 1em auto 0; width: 30%; }
 .logo-s { width: 30px; }
+.pos-absolute { position: absolute; top: 0; }
+.pos-relative { position: relative }
 .nowrap { display: inline-block; margin-right: .2em; }
-.opacity-01 { opacity: .3; }
+.opacity-01 { opacity: .1; }
 .right { float: right; }
+
+.left-to-center-1 {
+  animation-duration: 10s;
+  animation-name: left-to-center-1;
+  margin: 0 auto;
+}
+@keyframes left-to-center-1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  20% {
+    margin-left: 0;
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.right-to-center-1 {
+  animation-duration: 10s;
+  animation-name: right-to-center-1;
+}
+@keyframes right-to-center-1 {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.appear-2 {
+  animation-duration: 10s;
+  animation-name: appear-2;
+}
+@keyframes appear-2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-to-bottom-3 {
+  animation-duration: 10s;
+  animation-name: top-to-bottom-3;
+}
+@keyframes top-to-bottom-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear-4 {
+  animation-duration: 10s;
+  animation-name: appear-4;
+}
+@keyframes appear-4 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear-5 {
+  animation-duration: 10s;
+  animation-name: appear-5;
+}
+@keyframes appear-5 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-to-contrast-6 {
+  animation-duration: 10s;
+  animation-name: text-to-contrast-6;
+  color: var(--text-contrast-color);
+}
+@keyframes text-to-contrast-6 {
+  0% {
+    color: var(--text-color);
+  }
+  70% {
+    color: var(--text-color);
+  }
+  80% {
+    color: var(--text-contrast-color);
+  }
+  100% {
+    color: var(--text-contrast-color);
+  }
+}
 
 @media (min-width: 1000px) {
   html { font-size: 22px; }
@@ -87,5 +174,6 @@ p {
 }
 
 @media (max-width: 700px) {
-  html { font-size: 20px; }
+  html { font-size: 16px; }
+  .logo-animation { width: 50%; }
 }
